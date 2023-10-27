@@ -50,12 +50,13 @@ Node-Blog-api/
   │   ├── User.js
   │   ├── Blog.js
   ├── services/
-  │   ├── blogConfig.js
+  │   ├── cloudinaryConfig.js
+  │   ├── multer.js
   ├── routes/
   │   ├── authRoutes.js
   │   ├── userRoutes.js
   │   ├── blogRoutes.js
-  ├── uploads/    # Create this folder to temporarily store image uploads
+  ├── uploads/    # this folder is optional since we'll be saving our uploads to cloudinary
   index.js
   .env
 ```
