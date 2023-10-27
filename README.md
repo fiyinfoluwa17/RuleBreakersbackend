@@ -242,10 +242,10 @@ Test your API endpoints using Postman or any API testing tool. Ensure that you c
 
 To host your API on Render, create a new Render service, connect your project's GitHub repository, and set up your deployment configuration. Ensure that environment variables (e.g., Cloudinary credentials) are securely stored on Render.
 
-By following these steps and using the provided code examples in my repo [https://github.com/Blard-omu/Node-Blog-api.git], you can effectively set up and deploy your Node.js blog API.
+By following these steps and using the provided code examples in my <a href="https://github.com/Blard-omu/Node-Blog-api.git">repo</a>, you can effectively set up and deploy your Node.js blog API.
 
 ---
 
 Feel free to customize the documentation further to include any specific setup or usage instructions for your project.
 
-I am BLARD, a Fullstack Developer and coding instructor at <a href="https://www.techstudioacademy.com/">Techstudioacademy</a>
+I am <a href="https://github.com/Blard-omu">BLARD</a>, a Fullstack Developer and coding instructor at <a href="https://www.techstudioacademy.com/">Techstudioacademy</a>
