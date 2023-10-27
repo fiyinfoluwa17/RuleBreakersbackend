@@ -19,9 +19,10 @@
    npm start
    ```
 
-<!-- Alternatively -->
+---
+## Alternatively,
 
-### Step 2: Project Initialization
+### Step 2: Initialization a new prroject
 
 1. Create a new Node.js project and initialize it with npm:
 
