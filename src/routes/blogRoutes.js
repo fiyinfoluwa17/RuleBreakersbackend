@@ -6,7 +6,7 @@ import upload from '../services/multer.js'
 const router = express.Router();
 
 // Endpoint to create a new blog (create)
-router.post('/create',  upload.single('image'), createBlog);
+router.post('/create',  upload.single('imageUrl'), createBlog);
 // Endpoint to get all blogs (Read)
 router.get('/blogs/all', getAllBlogs);
 
