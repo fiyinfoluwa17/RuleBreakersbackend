@@ -2,11 +2,12 @@
 import express from 'express';
 import { createBlog, getAllBlogs, getBlogById, updateBlog, deleteBlog } from '../controllers/blogController.js';
 import upload from '../services/multer.js'
+import requireSignedIn from '../middlewares/auth.js';
 
 const router = express.Router();
 
 // Endpoint to create a new blog (create)
-router.post('/create',  upload.single('imageUrl'), createBlog);
+router.post('/create', requireSignedIn,  upload.single('imageUrl'), createBlog);
 // Endpoint to get all blogs (Read)
 router.get('/blogs/all', getAllBlogs);
 

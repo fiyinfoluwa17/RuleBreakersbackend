@@ -4,7 +4,7 @@ import User from '../models/User.js';
 
 
 
-// Create a new blog post
+ // Create a new blog post
 const createBlog = async (req, res) => {
   try {
     const { title, content, author } = req.body;
