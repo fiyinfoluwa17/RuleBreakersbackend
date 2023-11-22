@@ -7,7 +7,7 @@ import requireSignedIn from '../middlewares/auth.js';
 const router = express.Router();
 
 // Endpoint to create a new blog (create)
-router.post('/create', requireSignedIn,  upload.single('imageUrl'), createBlog);
+router.post('/create-blog', requireSignedIn,  upload.single('imageUrl'), createBlog);
 // Endpoint to get all blogs (Read)
 router.get('/blogs/all', getAllBlogs);
 
@@ -15,7 +15,7 @@ router.get('/blogs/all', getAllBlogs);
 router.get('/blog/:_id', getBlogById);
 
 // Endpoint to update a blog (Update)
-router.put('/blog/:_id', updateBlog);
+router.put('/blogger/:_id',  upload.single('imageUrl'), updateBlog);
 
 // Endpoint to delete a blog (Delete)
 router.delete('/blog/:_id', deleteBlog);

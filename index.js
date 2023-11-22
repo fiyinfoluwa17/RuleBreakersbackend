@@ -6,12 +6,18 @@ import morgan from "morgan";
 import blogRouter from "./src/routes/blogRoutes.js";
 import authRouter from "./src/routes/authRoutes.js";
 import userRouter from "./src/routes/userRoutes.js";
+import cors from 'cors'
 
 const app = express();
 dotenv.config();
 
+let corsOptions = {
+  origin: ['http://localhost:8080', 'http://localhost:5173', 'http://localhost:5174']
+
+}
 
 // middleware
+app.use(cors(corsOptions))
 app.use(morgan('dev'))
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));

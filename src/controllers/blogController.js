@@ -7,7 +7,7 @@ import User from '../models/User.js';
  // Create a new blog post
 const createBlog = async (req, res) => {
   try {
-    const { title, content, author } = req.body;
+    const { title, content, author, category } = req.body;
     const imageFile = req.file;
 
     // Find the user by their username
@@ -25,6 +25,7 @@ const createBlog = async (req, res) => {
       content,
       author: user.username,
       imageUrl: imageResult.secure_url,
+      category,
     });
 
     // Save the new blog to the database
@@ -82,6 +83,8 @@ const updateBlog = async (req, res) => {
 
     existingBlog.title = updatedBlogData.title || existingBlog.title;
     existingBlog.content = updatedBlogData.content || existingBlog.content;
+    existingBlog.state = updatedBlogData.state || existingBlog.state;
+    existingBlog.category = updatedBlogData.category || existingBlog.category;
 
     const updatedBlog = await existingBlog.save();
 

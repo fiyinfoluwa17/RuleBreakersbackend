@@ -6,7 +6,8 @@ const blogSchema = new mongoose.Schema({
     content: {type: String, required: true},
     state: {type: String, enum: ["draft", "published"], default: "draft"},
     author: {type: String},
-    imageUrl: {type: String}
+    imageUrl: {type: String},
+    category: {type: String},
 },
 {timestamps: true})
 
