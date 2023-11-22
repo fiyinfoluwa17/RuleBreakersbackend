@@ -91,7 +91,13 @@ const login = async (req, res) => {
     console.log("JWT_SECRET: ", secret);
   
     // send a notification
-    res.status(200).json({message: 'User logged in successfully', user, token});
+    res.status(200).json({message: 'User logged in successfully',
+    user: {
+      _id: user._id,
+      username: user.username, // Include username here
+      // Include other user information if needed
+    },
+    token,});
 
   }catch(err){
     res.status(500).json({message: "Login failed", error: err});
