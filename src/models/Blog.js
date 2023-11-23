@@ -8,6 +8,7 @@ const blogSchema = new mongoose.Schema({
     author: {type: String},
     imageUrl: {type: String},
     category: {type: String},
+    viewCount: {type: Number, default:0},
 },
 {timestamps: true})
 

@@ -56,6 +56,13 @@ const getBlogById = async (req, res) => {
     if (!blog) {
       return res.status(404).json({ message: 'Blog not found' });
     }
+    if (!req.session.viewedBlogs || !req.session.viewedBlogs.includes(blog._id.toString())) {
+      blog.viewCount += 1;
+      req.session.viewedBlogs = req.session.viewedBlogs || [];
+      req.session.viewedBlogs.push(blog._id.toString());
+      await blog.save();
+    }
+
 
     res.json(blog);
   } catch (error) {
