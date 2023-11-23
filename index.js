@@ -12,7 +12,7 @@ const app = express();
 dotenv.config();
 
 let corsOptions = {
-  origin: ['http://localhost:8080', 'http://localhost:5173', 'https://home-not-signed-in-viccipedia-mentor-jnr.vercel.app/']
+  origin: ['http://localhost:8080', 'http://localhost:5173', 'https://home-not-signed-in-viccipedia-mentor-jnr.vercel.app']
 
 }
 
